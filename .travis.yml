@@ -50,11 +50,11 @@ script:
   - python -c "import skrf; print('skrf %s' % skrf.__version__)"
   # move somewhere so that nosetests skrf tests the module, not the dir
   #- cd tools/
-  - nosetests skrf -c nose.cfg --with-cprofile --cprofile-stats-erase --cprofile-stats-file=profile_scikit-rf_d35cc00dcb_0
-  - python -m properform Push 47.88.50.110:15554 asdf_scikit-rf_d35cc00dcb_0 ./profile_scikit-rf_d35cc00dcb_0
+  - nosetests skrf -c nose.cfg --with-cprofile --cprofile-stats-erase --cprofile-stats-file=profile_scikit-rf_d35cc00dcb_1
+  - python -m properform Push 47.88.50.110:15554 asdf_scikit-rf_d35cc00dcb_1 ./profile_scikit-rf_d35cc00dcb_1
 
 
 
 after_success:
   - coveralls
- #2017-08-12 14:17:38 modified at 0
+ #2017-08-12 14:17:38 modified at 0 #2017-08-12 14:17:42 modified at 1
