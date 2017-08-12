@@ -23,7 +23,7 @@ install:
 
 # command to run tests
 script: 
-  - nosetests --exclude-dir=vi --with-cprofile --cprofile-stats-erase --cprofile-stats-file=profile_scikit-rf_9a1600792e_1
-  - python -m properform Push 47.88.50.110:15554 asdf_scikit-rf_9a1600792e_1 ./profile_scikit-rf_9a1600792e_1
+  - nosetests --exclude-dir=vi --with-cprofile --cprofile-stats-erase --cprofile-stats-file=profile_scikit-rf_9a1600792e_2
+  - python -m properform Push 47.88.50.110:15554 asdf_scikit-rf_9a1600792e_2 ./profile_scikit-rf_9a1600792e_2
 
- #2017-08-12 15:15:21 modified at 0 #2017-08-12 15:15:26 modified at 1
+ #2017-08-12 15:15:21 modified at 0 #2017-08-12 15:15:26 modified at 1 #2017-08-12 15:15:30 modified at 2
