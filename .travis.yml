@@ -5,9 +5,25 @@ python:
 
 before_install:
   - sudo apt-get install python-scipy python-matplotlib
+   # add for profile
+  - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
+  - sudo apt-get update -qq
+
+  
 # command to install dependencies
 install: 
   - pip install -r requirements.txt
   - python setup.py install
+# add for profile
+  - sudo apt-get install -qq g++-4.8
+  - export CXX="g++-4.8"
+  - pip install nose-cprof
+  - pip install properform
+
+
 # command to run tests
-script: nosetests --exclude-dir=vi
+script: 
+  - nosetests --exclude-dir=vi --with-cprofile --cprofile-stats-erase --cprofile-stats-file=profile_scikit-rf_9a1600792e_0
+  - python -m properform Push 47.88.50.110:15554 asdf_scikit-rf_9a1600792e_0 ./profile_scikit-rf_9a1600792e_0
+
+ #2017-08-12 15:15:21 modified at 0
